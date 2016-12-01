@@ -1,0 +1,52 @@
+<row>
+    <div class="col s12">
+        <ng-pluralize count="loansCtrl.loans.length" when="{'0': 'Vous n\'avez pas d\'objet prêté' ,
+                     'one': 'Vous avez un objet prêté',
+                     'other': 'vous avez {} objets prêtés'}"></ng-pluralize>
+    </div>
+</row>
+<row>
+    <div class="col s12 input-field">
+        <input id="filter" type="text" class="validate" name="filter" ng-model="filterCriteria">
+        <label for="filter">Critère de filtre</label>
+    </div>
+</row>
+<row>
+    <div class="col s12">
+        <form class="col s12 white" name="newLoan">
+            <row class="valign-wrapper">
+                <div class="input-field col s5">
+                    <input id="object" type="text" class="validate" name="object" ng-model="loansCtrl.newLoan.object" ng-required="true">
+                    <label for="object">Objet</label>
+                </div>
+                <div class="input-field col s5">
+                    <md-input-container>
+                        <md-select ng-model="loansCtrl.newLoan.person" placeholder="à qui" ng-required="true">
+                            <md-option ng-value="person" ng-repeat="person in loansCtrl.persons">{{ person.name }}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div class="s2">
+                    <a class="waves-effect waves-light btn valign" ng-click="loansCtrl.addNewLoan($event)"
+                            ng-disabled="newLoan.$invalid">Ajouter</a>    
+                </div>
+            </row>
+        </form> 
+    </div>
+</row>
+<row>
+    <div class="col s4" ng-repeat="loan in loansCtrl.loans | filter:filterCriteria">
+        <card-cmp title="{{loan.object}}" background-color="{{loansCtrl.getColorFromDate(loan)}}"
+                value="loan" remove="loansCtrl.remove(value)">
+            <div class="row">
+                    <div class="col s6">Personne</div>
+                    <div class="col s6">{{loan.person.name}}</div>
+                </div>
+                <div class="row">
+                    <div class="col s6">Date</div>
+                    <div class="col s6">{{loan.loanedOn | date:'dd-MM-yyyy'}}</div>
+                </div>
+            </div>
+        </card-cmp>
+    </div>
+</row>

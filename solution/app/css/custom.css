@@ -1,0 +1,12 @@
+.col.s3.light-blue, .col.s9.light-blue {
+  min-height: 100vh; /* use "vh" instead of % */
+}
+
+.col.s3.blue.a {
+    color:#FFF ! important;
+}
+
+.ng-invalid{
+    border-color:#ff0000 !important;
+    border-width: 3px !important;
+}

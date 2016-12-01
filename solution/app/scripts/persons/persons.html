@@ -1,0 +1,11 @@
+<row>
+    <div class="col s4" ng-repeat="person in personsCtrl.persons">
+        <card-cmp title="{{person.name}}" background-color="light-blue">
+            <div class="row">
+                <div class="col s12">
+                    <img class="responsive-img" ng-src="{{person.picture | picUrl}}"></img>
+                </div>
+            </div>
+        </card-cmp>
+    </div>
+</row>
