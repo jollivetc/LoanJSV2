@@ -7,7 +7,7 @@
 </row>
 <row>
     <div class="col s12 input-field">
-        <input id="filter" type="text" class="validate" name="filter" ng-model="filterCriteria">
+        <input id="filter" type="text" class="validate" name="filter" ng-model="loansCtrl.filterCriteria">
         <label for="filter">Critère de filtre</label>
     </div>
 </row>
@@ -35,7 +35,7 @@
     </div>
 </row>
 <row>
-    <div class="col s4" ng-repeat="loan in loansCtrl.loans | filter:filterCriteria">
+    <div class="col s4" ng-repeat="loan in loansCtrl.loans | filter:loansCtrl.filterCriteria">
         <card-cmp title="{{loan.object}}" background-color="{{loansCtrl.getColorFromDate(loan)}}"
                 value="loan" remove="loansCtrl.remove(value)">
             <div class="row">
