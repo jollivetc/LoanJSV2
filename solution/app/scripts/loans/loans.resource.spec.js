@@ -1,9 +1,8 @@
 'use strict';
 describe('loanApp', function(){
     beforeEach(function () {
-        module('loanApp');
+        module('loan.module');
     });
-    beforeEach(function(){module("my.templates")});
     describe('Loan', function(){
         var loan, httpBackend;
         beforeEach(inject(function(Loan, $httpBackend){
