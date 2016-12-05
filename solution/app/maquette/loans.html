@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/materialize/dist/js/materialize.min.js"></script>
+</head>
+
+<body class="">
+
+    <nav>
+        <div class="nav-wrapper blue">
+            <a class="brand-logo" href="#/list">J'ai prêté</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+
+        <div class="row">
+
+            <div class="col s3 light-blue lighten-4">
+                <ul>
+                    <li><a href="#/list/loans" class="active">Objets prêtés</a></li>
+                    <li><a href="#/list/persons">Personnes</a></li>
+                </ul>
+
+            </div>
+            <div class="col s9 light-blue lighten-4">
+                <md-content class="_md">
+                    <row class="">
+                        <div class="col s12">
+                            vous avez 3 objets prêtés
+                        </div>
+                    </row>
+                    <row class="">
+                        <div class="col s12 input-field">
+                            <input id="filter" type="text" class="validate" name="filter" aria-invalid="false">
+                            <label for="filter">Critère de filtre</label>
+                        </div>
+                    </row>
+                    <row class="">
+                        <div class="col s12">
+                            <form class="col s12 white" name="newLoan">
+                                <row class="valign-wrapper">
+                                    <div class="input-field col s5">
+                                        <input id="object" type="text" class="validate" name="object" required="required" aria-invalid="true">
+                                        <label for="object">Objet</label>
+                                    </div>
+                                    <div class="input-field col s5">
+                                        <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Actarus</option>
+                        <option value="2">Capitaine Kirk</option>
+                        <option value="3">Docteur Who</option>
+                        <option value="4">Luke Skywalker</option>
+                    </select>
+                                    </div>
+                                    <div class="s2">
+                                        <a class="waves-effect waves-light btn valign" disabled="disabled">Ajouter</a>
+                                    </div>
+                                </row>
+                            </form>
+                        </div>
+                    </row>
+                    <row class="">
+                        <div class="col s4">
+                            <div class="card darken-3 hoverable light-blue">
+                                <div class="card-content white-text">
+                                    <span class="card-title">SABRE LASER</span>
+
+                                    <div class="row">
+                                        <div class="col s6">Personne</div>
+                                        <div class="col s6">Luke Skywalker</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s6">Date</div>
+                                        <div class="col s6">09-11-2016</div>
+                                    </div>
+                                </div>
+                                <div class="card-action" aria-hidden="false">
+                                    <a class="waves-effect waves-light btn">Supprimer</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s4">
+                            <div class="card darken-3 hoverable light-blue">
+                                <div class="card-content white-text">
+                                    <span class="card-title">TOURNEVIS SONIQUE</span>
+
+                                    <div class="row">
+                                        <div class="col s6">Personne</div>
+                                        <div class="col s6">Docteur Who</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s6">Date</div>
+                                        <div class="col s6">28-05-2016</div>
+                                    </div>
+                                </div>
+                                <div class="card-action" aria-hidden="false">
+                                    <a class="waves-effect waves-light btn">Supprimer</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s4">
+
+                            <div class="card darken-3 hoverable red">
+                                <div class="card-content white-text">
+                                    <span class="card-title">GOLDORAK</span>
+
+
+                                    <div class="row">
+                                        <div class="col s6">Personne</div>
+                                        <div class="col s6">Actarus</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s6">Date</div>
+                                        <div class="col s6">31-08-2015</div>
+                                    </div>
+
+                                </div>
+                                <div class="card-action" aria-hidden="false">
+                                    <a class="waves-effect waves-light btn">Supprimer</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </row>
+                </md-content>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+</script>
+</body>
+
+</html>
