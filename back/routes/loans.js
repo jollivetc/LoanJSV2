@@ -30,7 +30,6 @@ router.get('/:loanId', function(req, res, next){
 });
 
 router.delete('/:loanId', function(req, res, next){
-	console.log(loans)
 	if(req.loan === null || req.loan === undefined){
 		res.status(404).json({messsage:'loan not found'});
 		return;
