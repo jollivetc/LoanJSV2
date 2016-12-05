@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css" >
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/materialize/dist/js/materialize.min.js"></script>
+</head>
+
+<body ng-app="loanApp">
+
+    <nav>
+        <div class="nav-wrapper blue">
+            <a ui-sref="list" class="brand-logo">J'ai prêté</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a ui-sref="about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+
+        <ui-view></ui-view>
+
+    </div>
+
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
