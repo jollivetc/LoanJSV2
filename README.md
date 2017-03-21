@@ -24,11 +24,11 @@ npm start`
 
 ### solution and start
 
-`npm install
+npm install
 
 bower install
 
-grunt serve`
+grunt serve
 
 ### end-to-end tests
 * start the back in a terminal
