@@ -24,7 +24,9 @@ npm start`
 
 ### solution and start
 `npm install
+
 bower install
+
 grunt serve`
 
 ### end-to-end tests
