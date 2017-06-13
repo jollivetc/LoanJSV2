@@ -2,15 +2,17 @@
   "name": "v1",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "1.5.9",
-    "angular-resource": "1.5.9",
-    "angular-messages": "1.5.9",
+    "angular": "1.6.4",
+    "angular-resource": "1.6.4",
+    "angular-messages": "1.6.4",
     "angular-ui-router": "0.3.2",
-    "materialize": "0.97.8",
-    "angular-material":"1.1.1"
+    "angular-animate": "1.6.4",
+    "angular-aria": "1.6.4",
+    "materialize": "0.98.2",
+    "angular-material":"1.1.4"
   },
   "devDependencies": {
-    "angular-mocks": "1.5.9",
-    "angular-scenario": "1.5.9"
+    "angular-mocks": "1.6.4",
+    "angular-scenario": "1.6.4"
   }
 }
